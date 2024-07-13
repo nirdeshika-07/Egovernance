@@ -1,0 +1,28 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.step {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+.step.active {
+    background-color: #4CAF50;
+    color: white;
+}
+

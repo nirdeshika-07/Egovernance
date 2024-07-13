@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="steps">
+        <div class="step active" id="step1">1</div>
+        <div class="step" id="step2">2</div>
+        <div class="step" id="step3">3</div>
+        <div class="step" id="step4">4</div>
+        <div class="step" id="step5">5</div>
+    </div>
+
+    <div class="section active" id="section1">
+        <h2>Personal Information</h2>
+        <div id="external-content"></div>
+        <button onclick="nextSection(1)">Next</button>
+    </div>
+    <div class="section" id="section2">
+        <input type="text" id="input2" placeholder="Enter something..." />
+        <button onclick="nextSection(2)">Next</button>
+    </div>
+    <div class="section" id="section3">
+        <h2>Section 3</h2>
+        <input type="text" id="input3" placeholder="Enter something..." />
+        <button onclick="nextSection(3)">Next</button>
+    </div>
+    <div class="section" id="section4">
+        <h2>Section 4</h2>
+        <input type="text" id="input4" placeholder="Enter something..." />
+        <button onclick="nextSection(4)">Next</button>
+    </div>
+    <div class="section" id="section5">
+        <h2>Section 5</h2>
+        <input type="text" id="input5" placeholder="Enter something..." />
+        <button onclick="submitForm()">Submit</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
