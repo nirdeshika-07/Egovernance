@@ -4,55 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="first.css">
+    <title>Form Example</title>
 </head>
 <body>
     <form action="#" method="POST" enctype="multipart/form-data">
         <p>The fields marked with (*) are mandatory!</p>
         <div class="group">
-            <label for="fname"><b>First Name*</b></label>
-            <input type="text" name="fname" id="fname" required="required">
-            <label for="mname"><b>Middle Name</b></label>
-            <input type="text" name="mname" id="mname">
-            <label for="lname"><b>Last Name*</b></label>
-            <input type="text" name="lname" id="lname" required="required">
+            <div class="row">
+                <label for="fname"><b>First Name*</b></label>
+                <input type="text" name="fname" id="fname" required="required">
+                <label for="mname"><b>Middle Name</b></label>
+                <input type="text" name="mname" id="mname">
+                <label for="lname"><b>Last Name*</b></label>
+                <input type="text" name="lname" id="lname" required="required">
+            </div>
         </div>
         <div class="group">
-            <input type="checkbox" id="name" name="name" value="">
-            <label for="name"><b>Spouse Name</b></label>
+            <input type="checkbox" id="spouse_name" name="spouse_name" value="">
+            <label for="spouse_name"><b>Spouse Name</b></label>
         </div>
         <div class="group">
-            <label for="fname"><b>Father's First Name*</b></label>
-            <input type="text" name="name" id="fname" required="required">
-            <label for="mname"><b>Father's Middle Name</b></label>
-            <input type="text" name="name" id="mname">
-            <label for="lname"><b>Father's Last Name*</b></label>
-            <input type="text" name="name" id="lname" required="required">
+            <div class="row">
+                <label for="father_fname"><b>Father's First Name*</b></label>
+                <input type="text" name="father_fname" id="father_fname" required="required">
+                <label for="father_mname"><b>Father's Middle Name</b></label>
+                <input type="text" name="father_mname" id="father_mname">
+                <label for="father_lname"><b>Father's Last Name*</b></label>
+                <input type="text" name="father_lname" id="father_lname" required="required">
+            </div>
         </div>
         <div class="group">
-            <label for="fname"><b>Mother's First Name*</b></label>
-            <input type="text" name="name" id="fname" required="required">
-            <label for="mname"><b>Mother's Middle Name</b></label>
-            <input type="text" name="name" id="mname">
-            <label for="lname"><b>Mother's Last Name*</b></label>
-            <input type="text" name="name" id="lname" required="required">
+            <div class="row">
+                <label for="mother_fname"><b>Mother's First Name*</b></label>
+                <input type="text" name="mother_fname" id="mother_fname" required="required">
+                <label for="mother_mname"><b>Mother's Middle Name</b></label>
+                <input type="text" name="mother_mname" id="mother_mname">
+                <label for="mother_lname"><b>Mother's Last Name*</b></label>
+                <input type="text" name="mother_lname" id="mother_lname" required="required">
+            </div>
         </div>
         <div class="group">
-            <label for="published"><b>Date of Birth (B.S.)*</b></label>
-            <input type="date" id="published" name="published" value="">
-            <label for="published"><b>Date of Birth (A.D.)*</b></label>
-            <input type="date" id="published" name="published" value="">
-            <label for="docs"><b>User Image*</b> <a href="image1.html"><u>User Image Sample</u></a></label>
-            <input type="file" id="docs" name="docs" value="">
+            <div class="row">
+                <label for="dob_bs"><b>Date of Birth (B.S.)*</b></label>
+                <input type="date" id="dob_bs" name="dob_bs">
+                <label for="dob_ad"><b>Date of Birth (A.D.)*</b></label>
+                <input type="date" id="dob_ad" name="dob_ad">
+                <label for="user_image"><b>User Image*</b> <a href="image1.html"><u>User Image Sample</u></a></label>
+                <input type="file" id="user_image" name="user_image">
+            </div>
         </div>
         <div class="group">
-            <label for="email"><b>Email</b></label>
-            <input type="text" id="pwd" name="password" value="">
-            <label for="num"><b>Mobile Number*</b></label>
-            <input type="num" id="num" name="num" value="">
-            <label for="male"><b>Gender</b></label>
-            <input type="radio" name="gender" id="male" checked="checked">Male
-            <input type="radio" name="gender" id="female" checked="checked">Female
-            <input type="radio" name="gender" id="others" checked="checked">Others
+            <div class="row">
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" name="email">
+                <label for="mobile"><b>Mobile Number*</b></label>
+                <input type="tel" id="mobile" name="mobile">
+                <label for="gender"><b>Gender</b></label>
+                <div class="gender-group">
+                    <input type="radio" name="gender" id="male" value="male" checked="checked"> <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
+                    <input type="radio" name="gender" id="others" value="others"> <label for="others">Others</label>
+                </div>
+            </div>
         </div>
     </form>
 </body>

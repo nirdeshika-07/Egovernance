@@ -3,46 +3,67 @@ body {
 }
 
 form {
-    max-width: 95%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
 }
-
 .group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.row label,
+.row label {
+    flex: 1 1 30%;
+    margin-right: 10px;
+    text-align: right;
+    padding: 5px 0;
+}
+
 .row input {
     flex: 1 1 30%;
-    margin-bottom: 20px;
+    margin-right: 10px;
     box-sizing: border-box;
+    padding: 5px;
 }
 
-.group input[type="checkbox"],
-.group input[type="radio"] {
-    flex: 1 1 auto;
+.row .gender-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(30% - 10px);
     margin-right: 10px;
 }
 
-.group label[for="spouse"] {
-    flex: 0 1 auto;
-}
-
-.group input[type="file"],
-.group a {
-    flex: 1 1 100%;
+.gender-group label {
+    margin-right: 10px;
 }
 
 p {
     margin-bottom: 20px;
     font-weight: bold;
 }
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
