@@ -10,7 +10,7 @@
     <div class="login-container">
         <img src="onlinepolice.png" alt="Logo" class="login-logo">
         <h2>Login</h2>
-        <form action="/login" method="post">
+        <form id="loginForm">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -21,14 +21,11 @@
             </div>
             <button type="submit">Login</button>
             <div class="options">
-                <a href="/forgot-password">Forgot Password?</a><br/>
-                <div class="side-by-side">
-                    <label for="register">Don't have an account yet?</label>
-                    <a href="/register">Register</a>
-                </div>
+                <a href="forgot-pw.html">Forgot Password?</a>
+                <a href="register.html">Register</a>
             </div>
-                      
         </form>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>
