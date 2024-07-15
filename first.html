@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <form action="#" method="POST" enctype="multipart/form-data">
+  <form id="personal-info-form" action="#" method="POST" enctype="multipart/form-data">
     <p>The fields marked with (*) are mandatory!</p>
     <div class="group">
       <div class="input">
@@ -83,13 +83,51 @@
       </div>
       <div class="input">
         <label for="purpose"><b>Select your application purpose*</b></label>
-        <select id="purpose" name="purpose">
-          <option value="option1">Choose an option</option>
-          <option value="option2">Apply with Citizenship and Password</option>
-          <option value="option3">Apply with Citizenship only</option>
+        <select id="purpose" name="purpose" onchange="updateForm()">
+          <option value="none">Choose an option</option>
+          <option value="citizenship-passport">Apply with Citizenship and Passport</option>
+          <option value="citizenship-only">Apply with Citizenship only</option>
         </select>
       </div>
     </div>
+
+    <!-- Citizenship Info -->
+    <div id="citizenship-info" class="group">
+      <div class="input">
+        <label for="citizenship-number"><b>Citizenship Number*</b></label>
+        <input type="text" id="citizenship-number" name="citizenship-number" required="required">
+      </div>
+      <div class="input">
+        <label for="citizenship-issue-date"><b>Citizenship Issue Date (A.D.)*</b></label>
+        <input type="date" id="citizenship-issue-date" name="citizenship-issue-date" required="required">
+      </div>
+      <div class="input">
+        <label for="citizenship-issue-place"><b>Citizenship Issue Place*</b></label>
+        <input type="text" id="citizenship-issue-place" name="citizenship-issue-place" required="required">
+      </div>
+    </div>
+
+    <!-- Passport Info -->
+    <div id="passport-info" class="group">
+      <div class="input">
+        <label for="passport-number"><b>Passport Number*</b></label>
+        <input type="text" id="passport-number" name="passport-number">
+      </div>
+      <div class="input">
+        <label for="passport-issue-date"><b>Passport Issue Date(A.D.)*</b></label>
+        <input type="date" id="passport-issue-date" name="passport-issue-date">
+      </div>
+      <div class="input">
+        <label for="passport-expiry-date"><b>Passport Expiry Date*</b></label>
+        <input type="date" id="passport-expiry-date" name="passport-expiry-date">
+      </div>
+    </div>
+  
+    <!-- Buttons -->
+    <div class="button-group">
+      <button type="button" class="next-button" onclick="submitForm()">Submit</button>
+    </div>
+
   </form>
 
   <!-- Modal for User Image Sample -->

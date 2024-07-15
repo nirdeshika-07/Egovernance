@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Simulated successful login
             alert('Login successful!');
             // Redirect to dashboard or another page
-            window.location.href = 'dashboard.html';
+            window.location.href = 'first.html';
         } else {
             // Simulated login failure
             alert('Login failed. Please check your username and password.');
